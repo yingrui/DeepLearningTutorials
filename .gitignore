@@ -13,3 +13,6 @@ html
 *.pyc
 *~
 *.swp
+**/.DS_Store
+.idea
+data/*.pkl

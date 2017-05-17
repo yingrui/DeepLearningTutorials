@@ -27,23 +27,24 @@ Papers
 
 If you use this tutorial, cite the following papers:
 
-* `[pdf] <http://www.iro.umontreal.ca/~lisa/pointeurs/RNNSpokenLanguage2013.pdf>`_ Grégoire Mesnil, Xiaodong He, Li Deng and Yoshua Bengio. Investigation of Recurrent-Neural-Network Architectures and Learning Methods for Spoken Language Understanding. Interspeech, 2013.
+* `[pdf] <http://www.iro.umontreal.ca/~lisa/pointeurs/RNNSpokenLanguage2013.pdf>`__ Grégoire Mesnil, Xiaodong He, Li Deng and Yoshua Bengio. Investigation of Recurrent-Neural-Network Architectures and Learning Methods for Spoken Language Understanding. Interspeech, 2013.
 
-* `[pdf] <http://research.microsoft.com/en-us/people/gokhant/0000019.pdf>`_ Gokhan Tur, Dilek Hakkani-Tur and Larry Heck. What is left to be understood in ATIS?
+* `[pdf] <http://research.microsoft.com/en-us/people/gokhant/0000019.pdf>`__ Gokhan Tur, Dilek Hakkani-Tur and Larry Heck. What is left to be understood in ATIS?
 
-* `[pdf] <http://lia.univ-avignon.fr/fileadmin/documents/Users/Intranet/fich_art/997-Interspeech2007.pdf>`_ Christian Raymond and Giuseppe Riccardi. Generative and discriminative algorithms for spoken language understanding. Interspeech, 2007.
+* `[pdf] <http://lia.univ-avignon.fr/fileadmin/documents/Users/Intranet/fich_art/997-Interspeech2007.pdf>`__ Christian Raymond and Giuseppe Riccardi. Generative and discriminative algorithms for spoken language understanding. Interspeech, 2007.
 
-* `[pdf] <http://www.iro.umontreal.ca/~lisa/pointeurs/nips2012_deep_workshop_theano_final.pdf>`_ Bastien, Frédéric, Lamblin, Pascal, Pascanu, Razvan, Bergstra, James, Goodfellow, Ian, Bergeron, Arnaud, Bouchard, Nicolas, and Bengio, Yoshua. Theano: new features and speed improvements. NIPS Workshop on Deep Learning and Unsupervised Feature Learning, 2012.
+* `[pdf] <http://www.iro.umontreal.ca/~lisa/pointeurs/nips2012_deep_workshop_theano_final.pdf>`__ Bastien, Frédéric, Lamblin, Pascal, Pascanu, Razvan, Bergstra, James, Goodfellow, Ian, Bergeron, Arnaud, Bouchard, Nicolas, and Bengio, Yoshua. Theano: new features and speed improvements. NIPS Workshop on Deep Learning and Unsupervised Feature Learning, 2012.
 
-* `[pdf] <http://www.iro.umontreal.ca/~lisa/pointeurs/theano_scipy2010.pdf>`_ Bergstra, James, Breuleux, Olivier, Bastien, Frédéric, Lamblin, Pascal, Pascanu, Razvan, Desjardins, Guillaume, Turian, Joseph, Warde-Farley, David, and Bengio, Yoshua. Theano: a CPU and GPU math expression compiler. In Proceedings of the Python for Scientific Computing Conference (SciPy), June 2010.
+* `[pdf] <http://www.iro.umontreal.ca/~lisa/pointeurs/theano_scipy2010.pdf>`__ Bergstra, James, Breuleux, Olivier, Bastien, Frédéric, Lamblin, Pascal, Pascanu, Razvan, Desjardins, Guillaume, Turian, Joseph, Warde-Farley, David, and Bengio, Yoshua. Theano: a CPU and GPU math expression compiler. In Proceedings of the Python for Scientific Computing Conference (SciPy), June 2010.
 
 Thank you!
 
 Contact
 =======
 
-Please email to `Grégoire Mesnil <http://www-etud.iro.umontreal.ca/~mesnilgr/>`_ for any
-problem report or feedback. We will be glad to hear from you.
+Please email to
+``Grégoire Mesnil (first-add-a-dot-last-add-at-gmail-add-a-dot-com)``
+for any problem report or feedback. We will be glad to hear from you.
 
 Task
 ++++
@@ -101,7 +102,7 @@ Raw input encoding
 
 A token corresponds to a word. Each token in the ATIS vocabulary is associated to an index. Each sentence is a
 array of indexes (``int32``). Then, each set (train, valid, test) is a list of arrays of indexes. A python
-dictionnary is defined for mapping the space of indexes to the space of words.
+dictionary is defined for mapping the space of indexes to the space of words.
     
     >>> sentence
     array([383, 189,  13, 193, 208, 307, 195, 502, 260, 539,
@@ -224,7 +225,7 @@ The **parameters** of the E-RNN to be learned are:
 * the word embeddings (real-valued matrix) 
 * the initial hidden state (real-value vector)
 * two matrices for the linear projection of the input ``t`` and the previous hidden layer state ``t-1``
-* (optionnal) bias. `Recommendation <http://en.wikipedia.org/wiki/Occam's_razor>`_: don't use it.
+* (optional) bias. `Recommendation <http://en.wikipedia.org/wiki/Occam's_razor>`_: don't use it.
 * softmax classification layer on top
 
 The **hyperparameters** define the whole architecture:
@@ -282,7 +283,7 @@ the true labels and compute some metrics. In this `repo
 <http://www.cnts.ua.ac.be/conll2000/chunking/conlleval.txt>`_ PERL script.
 It's not trivial to compute those metrics due to the `Inside Outside Beginning
 (IOB) <http://en.wikipedia.org/wiki/Inside_Outside_Beginning>`_ representation
-i.e. a prediction is considered correct if the word-beginnin **and** the
+i.e. a prediction is considered correct if the word-beginning **and** the
 word-inside **and** the word-outside predictions are **all** correct.
 Note that the extension is `txt` and you will have to change it to `pl`.
 

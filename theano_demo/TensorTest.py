@@ -11,10 +11,10 @@ class TensorTest(TestCase):
         x = T.dscalar('x')
         y = T.dscalar('y')
         z = x + y
-        print pp(z)
+        print(pp(z))
 
         f = function([x, y], z)
-        print f(2, 3)
+        print(f(2, 3))
         assert f(2, 3) == 2 + 3
 
     def test_AddMatrix(self):
@@ -34,7 +34,7 @@ class TensorTest(TestCase):
         logistic = function([x], [sigmoid, tanh])
         y = logistic([[0, 1], [-1, -2]])
         assert len(y) == 2
-        print y[0], y[1]
+        print(y[0], y[1])
 
     def test_SetDefaultValueForAnArgument(self):
         x, y = T.dscalars('x', 'y')

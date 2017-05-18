@@ -18,7 +18,7 @@ class GradientTest(TestCase):
         assert f(3, 3) == 15.
         assert 6. == sx.get_value()
         assert 2. == sy.get_value()
-        print sx.get_value(), sy.get_value()
+        print(sx.get_value(), sy.get_value())
 
     def testLinearFunctionGradForMatrixInput(self):
         x = T.matrix('x')
@@ -31,5 +31,5 @@ class GradientTest(TestCase):
         sy = shared(numpy.asarray([0., 0.]))
 
         f = function(inputs=[x, y], outputs=z, updates=[(sx, gx), (sy, gy)])
-        print f(numpy.asarray([[1., 2.], [3., 4.]]), numpy.asarray([2., 3.]))
-        print sx.get_value(), sy.get_value()
+        print(f(numpy.asarray([[1., 2.], [3., 4.]]), numpy.asarray([2., 3.])))
+        print(sx.get_value(), sy.get_value())
